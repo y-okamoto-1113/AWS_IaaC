@@ -6,6 +6,7 @@
 aws --profile icey ec2 create-vpc --cidr-block 10.0.0.0/16 \
                                   --instance-tenancy default \
                                   --tag-specifications ResourceType=vpc,Tags='[{Key=Name,Value="okamoto test vpc"},{Key=Owner,Value="okamoto"}]' \
+                                  --region ap-northeast-1 \
                                   --output json
                                   # --query Vpc.VpcId
 
